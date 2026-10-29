@@ -23,5 +23,5 @@
 - **Definition of done:** Use `redis_url` to construct the client, verify healthy and unhealthy Redis outcomes with focused tests, remove the obsolete `attr-defined` suppression, and keep the health endpoint's response contract intact.
 - **Tier fit:** This is a Tier 1 change localized to the API health route, its tests, and the narrow type-check configuration. It does not require a cross-module architecture change.
 - **Test readiness:** There is no dedicated health-route test in the current suite, so I will add focused coverage following the existing pytest patterns rather than modify unrelated tests.
-- **Claims and scope:** The issue is open, has no assignee or comments, and the cohort ledger currently shows 0 claims. I estimate 2–4 focused hours, which fits the Unit 8–9 timeline.
+- **Claims and scope:** The issue was open with no assignee, comments, or prior cohort claims when I selected it. I estimate 2–4 focused hours, which fits the Unit 8–9 timeline.
 - **Dependencies:** The issue lists no blockers or unresolved dependencies. PostgreSQL and Redis are external services for integration checks, but the route behavior can be tested with mocks.
