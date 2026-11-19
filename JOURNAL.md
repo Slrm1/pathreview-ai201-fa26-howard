@@ -37,3 +37,29 @@
 **Walkthrough video (recommended):** Not recorded; this optional item is not graded.
 
 **Blockers or open questions:** Confirm whether maintainers want to keep the synchronous redis-py client in this async route. The scoped issue can be fixed safely with `Redis.from_url()`; moving to `redis.asyncio` would be a separate performance-oriented change.
+
+## Unit 9 — Solution building & PR submission
+
+### Check-in 1 (mid-week)
+
+**Current progress:** Reproduced #62 with a focused async test; mapped `api/routes/health.py`, `core/config.py`, `tests/unit/test_health.py`, and `pyproject.toml`; completed `PLAN.md`; and implemented the `Redis.from_url` healthy path.
+
+**Next steps:** Add failure-path coverage, run the complete checks, remove the obsolete mypy suppression, open the upstream PR, and verify all CI jobs.
+
+**Blockers:** None. The synchronous Redis client in this async route remains a separate scoped performance question and does not block #62.
+
+---
+
+### Check-in 2 (end of week)
+
+**PR link:** https://github.com/codepath/pathreview-ai201-fa26-howard/pull/78
+
+**Branch:** `fix/62-redis-health-check`
+
+**What I built:** Updated `GET /health` to construct Redis from `settings.redis_url`, preserving credentials, database, TLS, and query details from the configured URL while retaining the existing healthy/503 response contract. Removed the obsolete `attr-defined` mypy suppression.
+
+**Tests added or updated:** Updated `tests/unit/test_health.py` with a healthy-path test that verifies the configured URL and `decode_responses=True`, plus a Redis ping-failure test that verifies HTTP 503 with Redis unhealthy while the other dependencies remain healthy.
+
+**Verification:** [x] `make check` passes  [x] `make test-unit` passes (377 passed, 53 expected xfailed)  [x] all five PR CI checks pass
+
+**Draft PR feedback received from:** None; self-review completed against the Project 9 rubric and repository PR template.
