@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1376" height="540" viewBox="0 0 1376 540" role="img" aria-labelledby="title desc">
+  <title id="title">PR Review Coach terminal demonstration</title>
+  <desc id="desc">Verified offline output for PathReview pull request 78.</desc>
+  <rect width="1376" height="540" fill="#30363d"/>
+  <rect x="28" y="24" width="1320" height="492" fill="#0d1117"/>
+  <g fill="#e6edf3" font-family="DejaVu Sans Mono, monospace" font-size="18">
+    <text x="42" y="54">$ make pr-review-demo</text>
+    <text x="42" y="82">{</text>
+    <text x="62" y="110">"summary": "fix(api): use configured Redis URL in health check changes 3 file(s) with +67/-8 lines.",</text>
+    <text x="62" y="138">"risks": [</text>
+    <text x="82" y="166">"Dependency files changed; verify version compatibility and security impact."</text>
+    <text x="62" y="194">],</text>
+    <text x="62" y="222">"test_gaps": [</text>
+    <text x="82" y="250">"Confirm tests cover both the successful path and at least one failure path."</text>
+    <text x="62" y="278">],</text>
+    <text x="62" y="306">"next_steps": [</text>
+    <text x="82" y="334">"Run the repository's formatter, type checker, and focused test suite.",</text>
+    <text x="82" y="362">"Verify the PR description explains the problem, solution, and testing evidence.",</text>
+    <text x="82" y="390">"Ask a reviewer to inspect the highest-risk changed file before merging."</text>
+    <text x="62" y="418">],</text>
+    <text x="62" y="446">"files_reviewed": 3, "diff_truncated": false,</text>
+    <text x="62" y="474">"analysis_mode": "deterministic fallback"</text>
+    <text x="42" y="502">}</text>
+  </g>
+</svg>
