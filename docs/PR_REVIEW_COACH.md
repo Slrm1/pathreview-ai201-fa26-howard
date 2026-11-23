@@ -27,6 +27,8 @@ GitHub token, network connection, or paid LLM key.
 
 ![PR Review Coach terminal demonstration](images/pr-review-coach-demo.png)
 
+The screenshot above was generated from the verified offline demonstration output.
+
 ## Review a live public pull request
 
 ```bash
