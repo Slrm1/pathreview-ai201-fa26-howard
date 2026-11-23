@@ -1,4 +1,4 @@
-.PHONY: setup run test-unit test-integration test-all lint format typecheck check migrate seed reset-db eval clean
+.PHONY: setup run pr-review-demo test-unit test-integration test-all lint format typecheck check migrate seed reset-db eval clean
 
 SHELL := /bin/bash
 
@@ -33,6 +33,11 @@ run: ## Start backend + frontend dev servers
 	source $(VENV_BIN)/activate && uvicorn api.main:app --reload --host 0.0.0.0 --port 8000 & \
 	cd frontend && npm run dev & \
 	wait
+
+pr-review-demo: ## Review PR #78 with the extra-credit coach (no API key required)
+	$(PYTHON) scripts/pr_review_coach.py \
+		https://github.com/codepath/pathreview-ai201-fa26-howard/pull/78 \
+		--fixture docs/demo/pr78_fixture.json --no-ai
 
 # ---- Tests ----
 
