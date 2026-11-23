@@ -63,3 +63,37 @@
 **Verification:** [x] `make check` passes  [x] `make test-unit` passes (377 passed, 53 expected xfailed)  [x] all five PR CI checks pass
 
 **Draft PR feedback received from:** None; self-review completed against the Project 9 rubric and repository PR template.
+
+
+## Unit 10 — Iteration & reflection
+
+### Reviewer feedback
+
+**Feedback received:**  
+[ ] Yes  
+[x] No — still awaiting review
+
+**Summary of feedback:**  
+No maintainer or reviewer feedback has been posted on the pull request yet.
+
+**How you responded:**  
+No response or additional changes were needed because no reviewer feedback had been received.
+
+---
+
+### Reflection
+
+**What was harder than you expected?**  
+The project was not as difficult as I expected. Some of my friends told me this course was extremely hard, so I expected the work to be more overwhelming. My previous internship experience and the YouTube videos I used to learn how to navigate large codebases made the technical work more familiar. The harder part was remaining consistent while balancing the course with my work schedule.
+
+**What did you learn about working in a large codebase?**  
+I did not learn as much about large codebases as I expected because I had already worked with them during my internship and learned many of the basic techniques through YouTube videos. However, this project reinforced the importance of tracing a problem across related files, keeping a fix limited to the issue's scope, preserving existing behavior, and using tests to verify that a small change does not create problems elsewhere.
+
+**How did AI tools help—and where did they fall short?**  
+AI was most helpful for finding errors and details that I was overlooking. It helped me review the code, identify possible problems, and check my work more efficiently. However, I still needed to understand the repository's structure, decide which changes were appropriate for the issue, and verify the solution through tests and CI instead of accepting every AI suggestion automatically.
+
+**What would you do differently if you started over?**  
+I would attend more classes and plan my course schedule around my work schedule more carefully. Missing classes made it harder to stay connected to the course. I would also start assignments earlier and create a consistent weekly routine instead of waiting until deadlines were close.
+
+**What are you most proud of from this module?**  
+I am most proud that I became more consistent and locked in as the course continued. I started the course by slacking and cruising, but I improved my focus and finished the module with a scoped bug fix, focused tests, a complete pull request, and passing checks.
