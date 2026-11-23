@@ -1,0 +1,32 @@
+{
+  "pr": {
+    "title": "fix(api): use configured Redis URL in health check",
+    "body": "Fixes the Redis dependency check in GET /health by constructing the client from the configured Redis URL. Includes focused healthy-path and failure-path tests.",
+    "changed_files": 3,
+    "additions": 67,
+    "deletions": 8
+  },
+  "files": [
+    {
+      "filename": "api/routes/health.py",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 5,
+      "patch": "-redis.Redis(host=settings.redis_host, port=settings.redis_port)\n+redis.Redis.from_url(settings.redis_url, decode_responses=True)"
+    },
+    {
+      "filename": "tests/unit/test_health.py",
+      "status": "modified",
+      "additions": 62,
+      "deletions": 0,
+      "patch": "+async def test_health_uses_configured_redis_url(): ...\n+async def test_health_returns_503_when_redis_ping_fails(): ..."
+    },
+    {
+      "filename": "pyproject.toml",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 3,
+      "patch": "Remove the obsolete attr-defined suppression for api.routes.health."
+    }
+  ]
+}
