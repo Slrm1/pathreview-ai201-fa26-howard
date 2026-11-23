@@ -25,7 +25,7 @@ make pr-review-demo
 The included fixture mirrors the shape of PathReview PR #78, so this command works without a
 GitHub token, network connection, or paid LLM key.
 
-![PR Review Coach terminal demonstration](images/pr-review-coach-demo.png)
+![PR Review Coach terminal demonstration](images/pr-review-coach-demo.svg)
 
 The screenshot above was generated from the verified offline demonstration output.
 
